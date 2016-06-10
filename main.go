@@ -10,10 +10,6 @@ const Version = "0.0.1"
 
 var version = flag.Bool("version", false, "print version and exit")
 
-func bold(str string) string {
-	return "\033[1m" + str + "\033[0m"
-}
-
 func main() {
 
 	flag.Usage = func() {
@@ -24,7 +20,7 @@ func main() {
 	flag.Parse()
 
 	if *version {
-		fmt.Printf("utmptail %s\n", Version)
+		fmt.Printf("template %s\n", Version)
 		os.Exit(0)
 	}
 
